@@ -1,7 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:700');
 @import url('https://fonts.googleapis.com/css?family=Yeseva+One');
-@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url('https://fonts.googleapis.com/css?family=Gentium+Book+Basic:400');
+
+@font-face {
+  font-family: 'Lato';
+  src: url('../font/Lato-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @-webkit-keyframes showOnActive {
     0%   { opacity: 0; }
@@ -128,9 +134,9 @@ body {
     width: 80%;
     margin: 0 auto;
     z-index: 20;
-    /* background: rgba(0, 0, 0, 0.8); */
-    background-image: url(/img/bg-quote.png);
-    display: flex; 
+    background-image: url(../img/bg-quote.png);
+    display: none;
+    /* display: flex;  */
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
@@ -147,6 +153,7 @@ body {
       width: 100%;
       padding: 15px;
       border-top: none;
+      box-sizing: border-box;
       border-bottom: 2px solid rgba(0, 0, 0, 0.0);
       transition: border-color 0.5s ease;
   }
@@ -252,6 +259,7 @@ body {
 }
 
 .header-button {
+  box-sizing: border-box;
   height: 58px;
   width: 230px;
   color: #fff;
@@ -270,6 +278,7 @@ body {
 .header-button_black:hover {
   background-color: rgba(0, 0, 0, 0.9);
 }
+
 .header-button_white:hover {
   color: #000;
   background-color: rgba(255, 255, 255, 0.9);
@@ -294,6 +303,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .section_about_rightFood{
   min-height: 510px;
   width: 430px;
@@ -338,7 +348,7 @@ h2 {
 
 .section_ingredients {
   min-height: 756px;
-  background: url(/img/bg2.png) no-repeat;
+  background: url(../img/bg2.png) no-repeat;
   background-size: cover;
   display: flex;
 }
@@ -357,9 +367,10 @@ h2 {
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
   min-height: 557px;
   max-width: 570px;
-  background: url(/img/bg-quote1.png);
+  background: url(../img/bg-quote1.png);
   margin: 0 40px;
   padding: 0 70px;
   color: #fff;
@@ -383,18 +394,17 @@ margin-top: 50px;
   
 }
 .sample1 {
-  background: url(/img/sample1.png);
+  background: url(../img/sample1.png);
 }
 .sample2 {
-  background: url(/img/sample2.png);
+  background: url(../img/sample2.png);
 }
 .sample3 {
-  background: url(/img/sample3.png);
+  background: url(../img/sample3.png);
 }
 
 .section_menu {
-  min-height: 994px;
-  background: url(/img/pattern2.png) no-repeat;
+  background: url(../img/pattern2.png) no-repeat;
   background-size: cover;
   padding: 100px 0;
 }
@@ -417,7 +427,7 @@ margin-top: 50px;
 }
 
 .menu_item {
-  width: 100%;
+
   padding: 10px;
 }
 
@@ -446,7 +456,7 @@ float: right;
 }
 
 .special {
-  background: url(/img/special.png) no-repeat;
+  background: url(../img/special.png) no-repeat;
   background-position: top right;
   width: 100%;
   padding-top: 22px;
@@ -457,7 +467,8 @@ float: right;
 
 .section_reviews {
   min-height: 758px;
-  background: url(/img/bg3.png) no-repeat;
+  box-sizing: border-box;
+  background: url(../img/bg3.png) no-repeat;
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -470,9 +481,10 @@ float: right;
   justify-content: center;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
   min-height: 557px;
   max-width: 770px;
-  background: url(/img/bg-quote.png);
+  background: url(../img/bg-quote.png);
   padding: 0 70px;
   color: #fff;
 }
@@ -502,9 +514,37 @@ float: right;
   min-height: 508px;
   max-width: 570px;
 }
-.img_block_left {
+/* .img_block_left {
   margin-right: 25px;
+} */
+.section_restoration{
+  background: url(../img/pattern.png) no-repeat;
+  background-size: cover;
+  min-height: 710px;
+  padding: 100px 0;
+  box-sizing: border-box;
 }
+
+.section_restoration_container {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1250px;
+}
+.section_restoration_form{
+  min-height: 510px;
+  width: 570px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
 
 @media screen and (max-width:992px) {
     .navbar ul {
@@ -513,16 +553,24 @@ float: right;
     .burger {
          display: block; 
     }
+    .menu.active {
+      display: flex;
+    }
 }
+
+@media screen and (max-width:850px) {
+  .section_menu_container {
+    height: 100%;
+
+  }
+}
+
+
 
 @media screen and (max-width:768px) {
 
   .header-title h1 {
     font-size: 80px;
-  }
-  .section_menu_container {
-    height: 100%;
-
   }
 
 }
