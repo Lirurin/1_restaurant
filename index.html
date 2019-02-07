@@ -39,8 +39,6 @@
                 </div>
             </div> 
         </div>
-
-         
     </div>
     <div class="header-container">
         <div class="menu"> 
@@ -200,13 +198,30 @@
     </div>
  <div class="section_restoration">
         <div class="section_restoration_container">
-            <img class="img_block_left" src=" img/imgblock1.png" alt="dish">
-            <img src="img/imgblock2.png" alt="dish">
+            <img class="img_food  dish" src=" img/imgblock.png" alt="dish">
             <div class="section_restoration_form">
                 <h2>Just the right food</h2>
                 <img class="divider" src="img/Divider-g.png" alt="">
-                <span class="text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food, delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out!</span>
-                <img class="cook" src="img/cook.png" alt="">
+                <span class="text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.</span>
+                <span class="text"> Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</span>
+                <form action="/action_page.php" method="get" id="restore">
+                    <label for="formName">Name</label>
+                    <input type="text" id="formName" name="fname" placeholder="your name *" required>
+                    <label for="formDate">Date</label>
+                    <input required="" id="formDate" name="fdate" type="text" placeholder="date *" onfocus="(this.type='date')"/>
+                    <label for="formEmail">Email</label>
+                    <input type="email" id="formEmail" name="fmail" placeholder="your email *" required>
+                    <label for="formParty">Party Number</label>
+                    <select id="formParty" name="fparty" value="party number">
+                        <option value="" disabled selected>party number</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="4">4</option>
+                        <option value="10">10</option>
+                        <option value="20">20</option>
+                    </select>
+                </form>
+                <a class="submit-button"  href="#" onclick="document.getElementById('restore').submit();">Book now!</a>
             </div>
         </div>
   </div>
