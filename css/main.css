@@ -10,7 +10,7 @@
 }
 @font-face {
   font-family: 'OpSans';
-  src: url('../font/2204.ttf') format('truetype');
+  src: url('../font/2211.ttf') format('truetype');
   font-weight: bold;
   font-style: normal;
 }
@@ -30,6 +30,15 @@
   @keyframes showOnActive {
     0%   { opacity: 0; }
     100% { opacity: 1; }
+  }
+  @keyframes slide1 {
+    0%   { background-position: 0 0;  }
+    50%   { background-position: -350px 0; }
+    100% { background-position: 0 0;  }
+  }
+  @keyframes slide2 {
+    from { background-position: 0 0; }
+    to { background-position: 0 360px; }
   }
 
 * {
@@ -142,7 +151,6 @@ body {
     z-index: 20;
     background-image: url(../img/bg-quote.png);
     display: none;
-    /* display: flex;  */
     flex-direction: column;
     align-items: center;
     flex-wrap: wrap;
@@ -300,7 +308,7 @@ body {
 }
 
 .section_about {
-  background: url(../img/pattern.png) no-repeat;
+  background: url(../img/pattern.png) repeat 0 0;
   background-size: cover;
   min-height: 710px;
   display: flex;
@@ -308,6 +316,7 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  animation: slide1 20s linear infinite;
 }
 
 .section_about_rightFood{
@@ -410,9 +419,10 @@ margin-top: 50px;
 }
 
 .section_menu {
-  background: url(../img/pattern2.png) no-repeat;
+  background: url(../img/pattern2.png) repeat 0 0;
   background-size: cover;
   padding: 100px 0;
+  animation: slide2 20s linear infinite;
 }
 
 .section_menu_container {
@@ -525,11 +535,12 @@ float: right;
   margin: 0 30px;
 }
 .section_restoration{
-  background: url(../img/pattern.png) no-repeat;
+  background: url(../img/pattern.png) repeat 0 0;
   background-size: cover;
   min-height: 710px;
   padding: 100px 0;
   box-sizing: border-box;
+  animation: slide1 20s linear infinite;
 }
 
 .section_restoration_container {
@@ -604,6 +615,56 @@ option[value=""][disabled] {
   font-size: 16px;
   padding: 7px 0;
 }
+
+.section_footer {
+  min-height: 320px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  box-sizing: border-box;
+  padding: 45px 0;
+  background-color: #000;
+}
+
+
+.footer_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+  margin: 5px 0;
+}
+.aboutUs {
+  max-width: 370px;
+
+}
+.opening {
+  max-width: 230px;
+
+}
+.location {
+  max-width: 230px;
+
+}
+.footer_divider {
+  width: 186px;
+  height: auto;
+  margin: 20px 0;
+}
+
+.footer-text {
+  font-family: OpSans;
+  font-size: 16px;
+}
+.footer_icons {
+  margin-top: 65px; 
+}
+i {
+  margin: 0 10px;
+}
+
 
 @media screen and (max-width:992px) {
     .navbar ul {
