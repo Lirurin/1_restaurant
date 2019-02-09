@@ -11,18 +11,18 @@
   <title>Document</title>
 </head>
 <body>
-  <div class="header">
+  <div id="Home" class="header">
     <div class="top">   
         <div class="top-container">
             <img class="logo" src="img/Logo.png" alt="Logo" >
             <div class="navbar">
                 <ul> <a href=""></a>
-                    <li class="nav-links"><a href="">Home</a></li>
-                    <li class="nav-links"><a href="">About</a></li>
-                    <li class="nav-links"><a href="">Igredients</a></li>
-                    <li class="nav-links"><a href="">Menu</a></li>
-                    <li class="nav-links"><a href="">Reviews</a></li>
-                    <li class="nav-links"><a href="">Reservations</a></li>
+                    <li class="nav-links"><a href="#Home">Home</a></li>
+                    <li class="nav-links"><a href="#About">About</a></li>
+                    <li class="nav-links"><a href="#Ingredients">Ingredients</a></li>
+                    <li class="nav-links"><a href="#Menu">Menu</a></li>
+                    <li class="nav-links"><a href="#Reviews">Reviews</a></li>
+                    <li class="nav-links"><a href="#Reservations">Reservations</a></li>
                     <li class="li-social nav-links">
                         <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-youtube-square"></i></a>
@@ -43,12 +43,12 @@
         <div class="menu"> 
             <img src="img/Divider.png" alt="">
             <ul> <a href=""></a>
-                <li class="nav-links-1"><a href="">Home</a></li>
-                <li class="nav-links"><a href="">About</a></li>
-                <li class="nav-links"><a href="">Igredients</a></li>
-                <li class="nav-links"><a href="">Menu</a></li>
-                <li class="nav-links"><a href="">Reviews</a></li>
-                <li class="nav-links"><a href="">Reservations</a></li>
+                <li class="nav-links"><a href="#Home">Home</a></li>
+                <li class="nav-links"><a href="#About">About</a></li>
+                <li class="nav-links"><a href="#Ingredients">Ingredients</a></li>
+                <li class="nav-links"><a href="#Menu">Menu</a></li>
+                <li class="nav-links"><a href="#Reviews">Reviews</a></li>
+                <li class="nav-links"><a href="#Reservations">Reservations</a></li>
                 <li class="li-social nav-links">
                     <a href=""><i class="fab fa-twitter"></i></a>
                     <a href=""><i class="fab fa-youtube-square"></i></a>
@@ -61,13 +61,13 @@
             <h1>the right ingredients<br> for the right food</h1>
             <img class="decore" src="img/Decoration.png" alt="Decoration">
             <div class="wrapper">
-                <a href="" class="header-button header-button_black">BOOK A TABLE</a>
-                <a href="" class="header-button header-button_white">SEE THE MENU</a>
+                <a href="#Reservations" class="header-button header-button_black">BOOK A TABLE</a>
+                <a href="#Menu" class="header-button header-button_white">SEE THE MENU</a>
             </div>
         </div>
     </div>
   </div>
-  <div class="section_about">
+  <div id="About" class="section_about">
       <div class="section_about_rightFood">
           <h2>Just the right food</h2>
           <img class="divider" src="img/Divider-g.png" alt="">
@@ -76,7 +76,7 @@
         </div>
       <img class="dish" src="img/dish.png" alt="dish">
   </div>
-    <div class="section_ingredients">
+    <div id="Ingredients" class="section_ingredients">
         <div class="ingredients_container">
             <div class="ingredients">
                 <h2 >Fine ingredients</h2>
@@ -90,7 +90,7 @@
             </div>
         </div>
     </div>
-    <div class="section_menu">
+    <div id="Menu" class="section_menu">
         <div class="section_menu_container">
             <div class="menu_chapter">
                 <h2>Appetisers</h2>
@@ -187,7 +187,7 @@
             </div>
         </div>
     </div>
-    <div class="section_reviews">
+    <div id="Reviews" class="section_reviews">
         <div class="review">
                     <h2>Guest Reviews</h2>
                     <img class="divider" src=" img/Divider.png" alt="">
@@ -195,15 +195,15 @@
                     <span class="review_from">- food inc, New York</span>
         </div>
     </div>
- <div class="section_restoration">
-        <div class="section_restoration_container">
+ <div id="Reservations" class="section_reservation">
+        <div class="section_reservation_container">
             <img class="img_food  dish" src=" img/imgblock.png" alt="dish">
-            <div class="section_restoration_form">
+            <div class="section_reservation_form">
                 <h2>Just the right food</h2>
                 <img class="divider" src="img/Divider-g.png" alt="">
                 <span class="text">If you’ve been to one of our restaurants, you’ve seen – and tasted – what keeps our customers coming back for more. Perfect materials and freshly baked food.</span>
                 <span class="text"> Delicious Lambda cakes,  muffins, and gourmet coffees make us hard to resist! Stop in today and check us out! Perfect materials and freshly baked food.</span>
-                <form action="/action_page.php" method="get" id="restore">
+                <form action="bookform.php" method="post" id="restore">
                     <label for="formName">Name</label>
                     <input type="text" id="formName" name="fname" placeholder="your name *" required>
                     <label for="formDate">Date</label>
@@ -225,23 +225,27 @@
         </div>
   </div>
   <div class="section_footer">
-          <div class="footer_content aboutUs">
-            <h3>About Us</h3>
-            <img class="footer_divider" src="img/Divider.png" alt="">
-            <span class="footer-text">Lambda's new and expanded Chelsea location represents a truly authentic <b>Greek</b> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.<br> Lamda the best restaurant in town</span>
-          </div>
-          <div class="footer_content opening">
+        <span class="empty_element"></span>
+        
+        <div class="footer_content opening">
             <div class="footer_content aboutUs">
-            <h3>Opening Hours</h3>
-            <img class="footer_divider" src="img/Divider.png" alt="">
-            <span class="footer-text">Mon-Thu: 7:00am-8:00pm<br> Fri-Sun: 7:00am-10:00pm</span>
-            <p class="footer_icons">
-                <i class="fab fa-cc-paypal"></i>
-                <i class="fab fa-cc-mastercard"></i>
-                <i class="fab fa-bitcoin"></i>
-            </p>
-          </div>
-          </div>
+                <h3>Opening Hours</h3>
+                <img class="footer_divider" src="img/Divider.png" alt="">
+                <span class="footer-text">Mon-Thu: 7:00am-8:00pm<br> Fri-Sun: 7:00am-10:00pm</span>
+                <p class="footer_icons">
+                    <i class="fab fa-cc-paypal"></i>
+                    <i class="fab fa-cc-mastercard"></i>
+                    <i class="fab fa-bitcoin"></i>
+                </p>
+            </div>
+        </div>
+
+        <div class="footer_content aboutUs">
+          <h3>About Us</h3>
+          <img class="footer_divider" src="img/Divider.png" alt="">
+          <span class="footer-text">Lambda's new and expanded Chelsea location represents a truly authentic <b>Greek</b> patisserie, featuring breakfasts of fresh croissants and steaming bowls of café.<br> Lamda the best restaurant in town</span>
+        </div>
+        
           <div class="footer_content location">
             <div class="footer_content aboutUs">
             <h3>Our Location</h3>
@@ -254,6 +258,7 @@
             </p>
           </div>
         </div>
+        <span class="empty_element"></span>
   </div>
   
 
