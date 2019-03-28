@@ -8,7 +8,7 @@
 			<p>E-mail: '.$_POST['fmail'].'</p>
 			<p>'.$_POST['fparty'].'</p>';
 		$headers  = "Content-type: text/html; charset=utf-8 \r\n";
-		$headers .= "From: shteben@restaurant.kl.com.ua";
+		$headers .= "From: shteben@symphony.kl.com.ua";
 		mail($to, $subject, $message, $headers);
 	}
 ?>
