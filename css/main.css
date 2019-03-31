@@ -766,6 +766,12 @@ i {
   }
 }
 
+@media screen and (max-width:992px) and (max-height: 480px) {
+  .content__nav ul li {
+    padding: 1px;
+  }
+}
+
 @media screen and (max-width:580px) {
 
   .submit-button{
@@ -774,9 +780,9 @@ i {
 
 }
 
-@media screen and (max-width:480px) {
+@media screen and (max-width:480px){
   .sectionHeader__content h1 {
-    font-size: 48px;
+    font-size: 70px;
   }
   .reservation__form{
     padding: 0 35px;
