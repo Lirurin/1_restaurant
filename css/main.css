@@ -784,6 +784,9 @@ i {
   .sectionHeader__content h1 {
     font-size: 70px;
   }
+  .content__nav img {
+    width: 80%;
+  }
   .reservation__form{
     padding: 0 35px;
   }
