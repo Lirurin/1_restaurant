@@ -10,29 +10,29 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-  <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
-  <link rel="shortcut icon" href="favicon/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
   <title>Symphony</title>
 </head>
 <body>
-    <header id="Home"> 
+    <header class="fixed" id="Home"> 
         <div class="top">   
             <div class="top__container">
                 <span class="container__logo">Symphony</span>
                 <nav class="container__navbar">
                     <ul class="navbar__item">
-                        <li><a href="#Home">Home</a></li>
-                        <li><a href="#About">About</a></li>
-                        <li><a href="#Ingredients">Ingredients</a></li>
-                        <li><a href="#Menu">Menu</a></li>
-                        <li><a href="#Reviews">Reviews</a></li>
+                        <li><a aria-label="To Home section" href="#Home">Home</a></li>
+                        <li><a aria-label="To About section" href="#About">About</a></li>
+                        <li><a aria-label="To Ingredients section" href="#Ingredients">Ingredients</a></li>
+                        <li><a aria-label="To Menu section" href="#Menu">Menu</a></li>
+                        <li><a aria-label="To Reviews section" href="#Reviews">Reviews</a></li>
                         <li><a href="#Reservations">Reservations</a></li>
                         <li class="navbar__social">
-                            <a href="#"><i class="fab fa-twitter"></i></a>
-                            <a href="#"><i class="fab fa-youtube-square"></i></a>
-                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a aria-label="To our Twitter chanel" href="#"><i class="fab fa-twitter"></i></a>
+                            <a aria-label="To our Youtube chanel" href="#"><i class="fab fa-youtube-square"></i></a>
+                            <a aria-label="To our Facebook page" href="#"><i class="fab fa-facebook-f"></i></a>
                         </li>
                     </ul>
                     <div class="container__burger">
@@ -49,16 +49,16 @@
             <div class="content__nav"> 
                 <img src="img/Divider.png" alt="Divider" >
                 <ul> 
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#About">About</a></li>
-                    <li><a href="#Ingredients">Ingredients</a></li>
-                    <li><a href="#Menu">Menu</a></li>
-                    <li><a href="#Reviews">Reviews</a></li>
+                    <li><a aria-label="To Home section" href="#Home">Home</a></li>
+                    <li><a aria-label="To About section" href="#About">About</a></li>
+                    <li><a aria-label="To Ingredients section" href="#Ingredients">Ingredients</a></li>
+                    <li><a aria-label="To Menu section" href="#Menu">Menu</a></li>
+                    <li><a aria-label="To Reviews section" href="#Reviews">Reviews</a></li>
                     <li><a href="#Reservations">Reservations</a></li>
                     <li class="navbar__social">
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-youtube-square"></i></a>
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a aria-label="To our Twitter chanel" href="#"><i class="fab fa-twitter"></i></a>
+                        <a aria-label="To our Youtube chanel" href="#"><i class="fab fa-youtube-square"></i></a>
+                        <a aria-label="To our Facebook page" href="#"><i class="fab fa-facebook-f"></i></a>
                     </li>
                 </ul>
                 <img class="upDown" src="img/Divider.png" alt="Divider" >    
@@ -66,8 +66,8 @@
             <h1>right place<br>right food</h1>
             <img class="decore" src="img/Decoration.png" alt="Decoration" >
             <div class="content__wrapper">
-                <a href="#Reservations" class="wrapper__button wrapper__button_black">BOOK A TABLE</a>
-                <a href="#Menu" class="wrapper__button  wrapper__button_black">SEE THE MENU</a>
+                <a aria-label="Book a table" href="#Reservations" class="wrapper__button wrapper__button_black">Book a table</a>
+                <a aria-label="See the menu" href="#Menu" class="wrapper__button  wrapper__button_black">See the menu</a>
             </div>
         </div>
   </header>
@@ -82,7 +82,7 @@
             </div>
             <img class="dish" src="img/imgblock1.png" alt="dish" >
       </section>
-      <section id="Ingredients" class="sectionIngredients">
+      <section id="Ingredients" class="sectionIngredients fixed">
             <div class="sectionIngredients__content">
                 <div class="content__IngrExample">
                     <h2 >Ingredients</h2>
@@ -192,7 +192,7 @@
                 </div>
             </div>
       </section>
-      <section id="Reviews" class="sectionReviews">
+      <section id="Reviews" class="sectionReviews fixed">
             <div class="sectionReviews__review">
                 <h2>Guest review</h2>
                 <img class="sectionReviews__divider" src=" img/Divider.png" alt="Divider" >
@@ -264,9 +264,9 @@
                 <img class="content__divider" src="img/Divider.png" alt="Divider" >
                 <span class="content__text">Cagliari, Chia<br>Sa Colonia Beach</span>
                 <p class="content__icons">
-                    <a><i class="fab fa-facebook-f"></i></a>  
-                    <a><i class="fab fa-youtube-square"></i></a>  
-                    <a><i class="fab fa-twitter"></i></a>  
+                    <a aria-label="To our Twitter chanel" href="#"><i class="fab fa-twitter"></i></a>
+                    <a aria-label="To our Youtube chanel" href="#"><i class="fab fa-youtube-square"></i></a>
+                    <a aria-label="To our Facebook page" href="#"><i class="fab fa-facebook-f"></i></a>
                 </p>
             </div>
         </div>

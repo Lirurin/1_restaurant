@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", function(){
 $(window).bind("load", function() {
     $('.form').submit(function(e) { 
     
@@ -16,7 +17,7 @@ $(window).bind("load", function() {
         setTimeout( function() { 
             alert("Ошибка отправления!"); 
         }, 1000); 
-     } 
+    } 
         }); 
         });
         
@@ -28,6 +29,7 @@ $(window).bind("load", function() {
     });
 
 });
+// free hosting  
 window.onload = function() { 
     try { 
         document.getElementsByClassName("cbalink")[0].parentNode.removeChild(document.getElementsByClassName("cbalink")[0]); 
@@ -36,28 +38,62 @@ window.onload = function() {
         //catch 
     } 
 }
+
+// anchor scroll
+window.onload = function () {
+    anchors = [].slice.call(document.querySelectorAll('a[href^="#"]'));
+    anchors.forEach(function (anchor) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        var anchorOffset = document.querySelector(this.getAttribute('href')).offsetTop;
+        window.scrollTo(0, anchorOffset - 7 * window.innerHeight / 100);
+      });
+    });
+  };
+
 var botbar = document.getElementsByClassName("top");
 var topCont = document.getElementsByClassName("top__container");
 var navItem = document.getElementsByClassName("navbar__item");
 var contBur = document.getElementsByClassName("container__burger");
 var prevOffset = window.pageYOffset;
 
+
+//menu resize
 window.onscroll = function myFnc() {
-    var newOffset = window.pageYOffset;
-    if (newOffset > prevOffset) {
-        botbar[0].classList.add("top-move");
-        topCont[0].classList.add("top__container-move");
-        navItem[0].classList.add("navbar__item-move");
-        contBur[0].classList.add("container__burger-move");
+    if (prevOffset == 0) {
+        var newOffset = window.pageYOffset;
+        if (newOffset > prevOffset) {
+            botbar[0].classList.add("top-move");
+            topCont[0].classList.add("top__container-move");
+            navItem[0].classList.add("navbar__item-move");
+            contBur[0].classList.add("container__burger-move");
+        } else {
+            botbar[0].classList.remove("top-move");
+            topCont[0].classList.remove("top__container-move");
+            navItem[0].classList.remove("navbar__item-move");
+            contBur[0].classList.remove("container__burger-move");
+        }  
     } else {
-        botbar[0].classList.remove("top-move");
-        topCont[0].classList.remove("top__container-move");
-        navItem[0].classList.remove("navbar__item-move");
-        contBur[0].classList.remove("container__burger-move");
+        var newOffset = window.pageYOffset;
+        if (newOffset == 0) {
+            botbar[0].classList.remove("top-move");
+            topCont[0].classList.remove("top__container-move");
+            navItem[0].classList.remove("navbar__item-move");
+            contBur[0].classList.remove("container__burger-move");
+        } else {
+            botbar[0].classList.add("top-move");
+            topCont[0].classList.add("top__container-move");
+            navItem[0].classList.add("navbar__item-move");
+            contBur[0].classList.add("container__burger-move");
+        }
     }
-}
+};
 
+// if(navigator.userAgent.match(/Trident\/7\./)) { // if IE
+//     alert('fuck')
+//     backgrounds = document.querySelector('fixed');
+//     background.style["background-attachment"] = "scroll";
 
+// }
 
-
-    
+});
